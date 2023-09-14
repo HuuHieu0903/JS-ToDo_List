@@ -42,7 +42,7 @@ window.addEventListener("load", () => {
         id++;
         let newItem = document.createElement("li");
         newItem.classList.add("item");
-        newItem.setAttribute("id-item", id);
+        newItem.setAttribute("id-item", newTask.id);
         let checkBox = document.createElement("div");
         checkBox.classList.add("check-box");
         let itemText = document.createElement("p");
