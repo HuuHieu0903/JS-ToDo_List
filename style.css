@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    background-image: linear-gradient(
+        to bottom right,
+        #30cfd0 0%,
+        #330867 100%
+    );
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+    color: #002765;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto 0;
+    padding: 30px 20px 50px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.heading img {
+    width: 50px;
+    margin-left: 20px;
+}
+
+.form {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#input-box {
+    flex-grow: 1;
+    padding: 15px 120px 15px 15px;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    color: #002765;
+    outline: none;
+    border-radius: 40px;
+    border: none;
+    background-color: #cccccc;
+}
+
+.btn-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 105px;
+    background-color: #ff5945;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.todo-list {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.todo-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+    background-color: #ff5945;
+}
+
+.item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.check-box {
+    width: 20px;
+    height: 20px;
+    background-image: url(./images/unchecked.png);
+    background-size: contain;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.done .check-box {
+    background-image: url(./images/checked.png);
+}
+
+.item-text {
+    max-width: 80%;
+    word-break: break-word;
+}
+
+.done .item-text {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.trash {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.trash::before,
+.trash::after {
+    content: "";
+    width: 70%;
+    height: 2px;
+    background-color: #002765;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.1s ease-in-out;
+}
+
+.trash::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.trash:hover::before,
+.trash:hover::after {
+    background-color: #ff5945;
+}

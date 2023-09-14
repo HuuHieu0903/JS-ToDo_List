@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To-Do list</title>
+        <link
+            rel="shortcut icon"
+            href="./images/icon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
+            rel="stylesheet"
+        />
+        <meta
+            property="og:image"
+            content="https://icon-library.com/images/todo-icon/todo-icon-17.jpg"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="1024" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="todo-app">
+                <div class="heading">
+                    <h1 class="title">To-Do List</h1>
+                    <img src="./images/icon.png" alt="icon" />
+                </div>
+                <div class="form">
+                    <input
+                        type="text"
+                        name="input"
+                        id="input-box"
+                        placeholder="Add your task"
+                        autofocus
+                    />
+                    <button type="submit" class="btn-submit">Add</button>
+                </div>
+                <ul class="todo-list">
+                    <!-- <li class="item">
+                        <div class="check-box"></div>
+                        <p class="item-text">item1</p>
+                        <div class="trash"></div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
